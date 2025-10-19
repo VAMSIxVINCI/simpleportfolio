@@ -1,0 +1,89 @@
+/* Basic reset and variables */
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --accent: #0077b6;
+  --text: #12232e;
+  --muted: #576b77;
+  --radius: 12px;
+  --maxw: 1100px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
+}
+
+/* Container */
+.container{
+  width:90%;
+  max-width:var(--maxw);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  background:linear-gradient(90deg, #0b6fa1, #0077b6);
+  color:white;
+  padding:18px 0;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand h1{font-size:1.1rem;margin-bottom:4px}
+.tagline{font-size:0.85rem;opacity:0.95}
+.nav a{
+  color:white;text-decoration:none;margin-left:18px;font-weight:600;font-size:0.95rem;
+}
+.nav a:hover{opacity:0.9}
+
+/* Hero */
+.hero{padding:48px 0}
+.hero-inner{display:flex;gap:30px;align-items:center}
+.hero-text h2{font-size:2rem;margin-bottom:10px}
+.hero-text p{color:var(--muted);margin-bottom:16px}
+.btn{
+  display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600;
+  box-shadow: 0 6px 18px rgba(3,65,97,0.12);
+}
+.btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent);margin-left:10px}
+
+/* Hero image */
+.hero-image img{width:220px;height:220px;object-fit:cover;border-radius:50%;border:6px solid white;box-shadow:0 8px 24px rgba(3,65,97,0.12)}
+
+/* Sections */
+.section{padding:36px 0}
+.section h3{font-size:1.25rem;margin-bottom:12px}
+.section p{color:var(--muted)}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:14px}
+.skill{background:var(--card);padding:12px;border-radius:10px;text-align:center;box-shadow:0 4px 12px rgba(16,24,32,0.06);font-weight:600}
+
+/* Projects */
+.project-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(16,24,32,0.06);margin-bottom:14px}
+.project-links a{margin-right:12px;color:var(--accent);text-decoration:none;font-weight:600}
+.small{color:var(--muted);font-size:0.9rem;margin-top:8px}
+
+/* Contact form */
+.contact-form{display:flex;flex-direction:column;gap:10px;margin-top:14px;max-width:600px}
+.contact-form input,.contact-form textarea{
+  padding:10px;border-radius:8px;border:1px solid #dfe7ec;background:white;
+}
+.contact-form button{width:180px}
+
+/* Footer */
+.site-footer{padding:18px 0;background:transparent;color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column-reverse;text-align:center}
+  .hero-image img{width:160px;height:160px}
+  .header-inner{flex-direction:column;gap:10px;align-items:flex-start}
+  .nav a{margin-left:0;margin-right:12px}
+}
